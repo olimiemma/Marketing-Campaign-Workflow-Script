@@ -40,7 +40,7 @@ def refine_ideas(ideas, model="claude"):
         refined_ideas.append(refined_idea)
     return refined_ideas
 
-def refine_with_claude(idea): #
+def refine_with_claude(idea): #refining
     response = anthropic.completions.create(
         model="claude-3-sonnet-20240229",
         prompt=f"Human: Refine and expand on the following marketing campaign idea: {idea}\n\nAssistant:",
@@ -49,7 +49,7 @@ def refine_with_claude(idea): #
     )
     return response.completion.strip()
 
-def refine_with_gpt(idea): # You dan use different models to refine the ideas, jjust to give you better checks, 
+def refine_with_gpt(idea): # You dan use different models to refine the ideas, just to give you better checks, 
     response = openai.Completion.create(
         engine="text-davinci-002",
         prompt=f"Refine and expand on the following marketing campaign idea: {idea}",
@@ -60,12 +60,12 @@ def refine_with_gpt(idea): # You dan use different models to refine the ideas, j
     )
     return response.choices[0].text.strip()
 
-def refine_with_gemma(idea): 
+def refine_with_gemma(idea): #One of the  smartest model as of this date July 8th, thats why I included it here for further refining
     # Placeholder for Gemma 2 implementation
     # You would need to implement the actual API call or model inference here
     return f"Gemma 2 refined idea: {idea}"
 
-def refine_with_llama(idea):
+def refine_with_llama(idea): #becauase why not, its llama :)
     # Placeholder for Llama implementation
     # You would need to implement the actual API call or model inference here
     return f"Llama refined idea: {idea}"

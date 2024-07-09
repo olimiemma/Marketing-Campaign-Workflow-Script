@@ -1,0 +1,22 @@
+graph TD
+    A[Start] --> B[Input: Product Details]
+    B --> C[Step 1: Generate Initial Ideas]
+    C --> D[AI Tool: GPT-3.5 for Idea Generation]
+    D --> E[Output: Multiple Creative Ideas]
+    E --> F[Step 2: Refine Ideas]
+    F --> G{Choose Refinement Model}
+    G -->|Default| H[AI Tool: Claude 3.5 Sonnet]
+    G -->|Option 1| I[AI Tool: GPT-3.5/4]
+    G -->|Option 2| J[AI Tool: Gemma 2]
+    G -->|Option 3| K[AI Tool: Llama]
+    H --> L[Output: Refined Campaign Concepts]
+    I --> L
+    J --> L
+    K --> L
+    L --> M[Step 3: Visual Representation]
+    M --> N[AI Tool: DALL-E for Image Generation]
+    N --> O[Output: Visual Mock-up]
+    O --> P[Step 4: Compile Results]
+    P --> Q[Tool: Automated Script for Report Generation]
+    Q --> R[Output: Final Presentation]
+    R --> S[End]
